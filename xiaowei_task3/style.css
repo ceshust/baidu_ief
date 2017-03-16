@@ -1,0 +1,74 @@
+
+.container:before{
+    display: table;
+    content: " ";
+}
+.container:after{
+    display: table;
+    content: " ";
+    clear:both;
+}
+.container {
+    position: relative;
+    margin:20px;
+    padding: 20px;
+    background-color: #eee;
+    border: 1px solid #999;
+    width: auto;
+    height: auto;
+}
+.container-left {
+    position: absolute;
+    float: left;
+    border: 1px solid #5e5e5e;
+    width: 200px;
+    height: 200px;
+    text-align:center;
+}
+.team-logo {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #999;
+    top:60px;
+    width: 160px;
+}
+.team-logo img{
+    float: left;
+}
+.team-name {
+    font-size: medium;
+    text-decoration: none;
+    float: left;
+    margin-top: 30px;
+    font-weight: bold;
+}
+.container-center {
+    position: absolute;
+    left:260px;
+    right:180px;
+    border: 1px solid #5e5e5e;
+    width: auto;
+    padding: 20px;
+}
+section{
+    margin-top:20px;
+}
+.container-right {
+    position: relative;
+    float: right;
+    border: 1px solid #5e5e5e;
+    width: 120px;
+    height: 400px;
+}
+.menber{
+    position: relative;
+    left:20px;
+    float: left;
+    width: 80px;
+    margin-top:10px;
+}
+.menber img {
+    margin: 0;
+    padding: 0;
+}
