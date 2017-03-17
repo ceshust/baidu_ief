@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位居中2</title>
+    <style>
+        html,body{
+            margin: 0px;
+            padding:0px;
+        }
+        #content{
+            position: absolute;
+            background-color: #ccc;
+            overflow: hidden;
+            padding: 10px 50px;
+            left: 50%;
+            top:50%;
+            -moz-transform: translate(-50%,-50%);
+            -o-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+        }
+        .circle-lt,.circle-rb{
+            position: absolute;
+            background-color: #fc0;
+            width: 100px;
+            height: 100px;
+            -webkit-border-radius:50px;
+            -moz-border-radius:50px;
+            border-radius:50px;
+        }
+        .circle-lt{
+            left:-50px;
+            top:-50px;
+        }
+        .circle-rb{
+            bottom:-50px;
+            right:-50px;
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+    <p> 垂直居中，高度和内容一致 </p>
+    <p> transform: translate(-50%,-50%);</p>
+
+    <div class="circle-lt"></div>
+    <div class="circle-rb"></div>
+</div>
+</body>
+</html>
