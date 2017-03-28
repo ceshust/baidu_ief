@@ -29,20 +29,21 @@ body {
     width: 110px;
     height: 61px;
     position: relative;
-    left: 0;
-    top: 0;
+    float: left;
 }
 
-.word_top_left {
+.ColorBlock_top_left p {
     position: absolute;
-    left: 0;
     bottom: 0;
+    left: 0;
     font-size: 12px;
     color: #fff;
     font-family: "黑体";
     padding: 4px;
 }
-
+.clear {
+    clear:both;
+}
 .line_grey_top {
     width: 892px;
     height: 2px;
@@ -51,11 +52,16 @@ body {
     left: 0;
     top: 0;
 }
-
-.word_top_right {
+.top_right{
+    width: 110px;
+    height: 61px;
     position: relative;
-    bottom: 22px;
     float: right;
+}
+.top_right p {
+    position: absolute;
+    right: 0;
+    bottom: 0;
     font-size: 12px;
     color: #d45d5c;
     font-family: "黑体";
