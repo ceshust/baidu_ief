@@ -1,0 +1,80 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+    <title>Task4</title>
+    <style>
+        .num{
+            padding:10px;
+            background:red;
+            float:left;
+            margin:10px;
+            color:#fff;
+            line-height:25px;
+        }
+    </style>
+
+</head>
+<body>
+<div>
+    <input type="text" id="input"/>
+    <button value="左侧进" type="button" onclick="doSomething(this)">左侧进</button>
+    <button value="右侧进" type="button" onclick="doSomething(this)">右侧进</button>
+    <button value="左侧出" type="button" onclick="doSomething(this)">左侧出</button>
+    <button value="右侧出" type="button" onclick="doSomething(this)">右侧出</button>
+
+</div>
+<div id="display">
+    <!--<div class="num">hello</div>-->
+</div>
+<script type="text/javascript">
+    var data = new Array();
+//    console.log(input);
+
+    function doSomething(obj)
+    {
+        var input = document.getElementById("input").value;
+        var value = obj.value;
+
+        switch(value)
+        {
+            case "左侧进":
+                data.unshift(input);
+
+
+                break;
+            case "右侧进":
+                data.push(input);
+                break;
+            case "左侧出":
+                data.shift();
+                break;
+            case "右侧出":
+                data.pop();
+                break;
+
+        }
+        console.log(data);
+        show();
+
+    }
+    function show()
+    {
+        var dialog = document.getElementById("input");
+        dialog.value="";
+        var input = document.getElementById("display");
+        input.innerHTML="";
+        for(var i =0;i<data.length;i++)
+        {
+            var div = document.createElement("div");
+            div.className="num";
+            div.innerHTML = data[i];
+            input.appendChild(div);
+        }
+
+    }
+</script>
+</body>
+</html>
